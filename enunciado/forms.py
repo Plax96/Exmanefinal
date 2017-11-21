@@ -13,4 +13,9 @@ class GradoForm(forms.ModelForm):
 class Gestion_gradoForm(forms.ModelForm):
     class Meta:
         model = Gestion_grado
-        fields = ('grado','materia')
+        fields = ('materia','grado')
+
+class MateriaForm(forms.ModelForm):
+    class Meta:
+        model = Materia
+        fields = ('nombre','alumno','profesor')
