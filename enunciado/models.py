@@ -34,6 +34,13 @@ class Nota(models.Model):
     def __str__(self):
         return self.nombre
 
+class Gestion_grado(models.Model):
+    grado = models.ForeignKey(Grado, on_delete = models.CASCADE, blank=True, null=True)
+    materia = models.ForeignKey(Materia, on_delete = models.CASCADE, blank=True, null=True)
+    def __str__(self):
+        return self.grado.nombre
+
+
 
 
 # Create your models here.
